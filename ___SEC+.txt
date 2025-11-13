@@ -1,5 +1,5 @@
 
-<!-- Your Monitor Number = #$34T# -->
+<!-- Your Monitor Number = 31 -->
 
 
 =======================================
@@ -226,7 +226,7 @@ type ethernet \
 con-name BRIDGED \
 ifname ens256 \
 ipv4.method manual \
-ipv4.addresses 10.#$34T#.1.6/24 \
+ipv4.addresses 10.31.1.6/24 \
 autoconnect yes
 
 nmcli connection up BRIDGED
@@ -236,8 +236,8 @@ nmcli connection up BRIDGED
 4. Routing
 ~~~
 !@NetOps-PH
-ip route add 10.0.0.0/8 via 10.#$34T#.1.4 dev ens___
-ip route add 200.0.0.0/24 via 10.#$34T#.1.4 dev ens___
+ip route add 10.0.0.0/8 via 10.31.1.4 dev ens___
+ip route add 200.0.0.0/24 via 10.31.1.4 dev ens___
 ip route add 0.0.0.0/0 via 11.11.11.113 dev ens___
 ~~~
 
@@ -407,9 +407,9 @@ config t
   ip source-address 208.8.8.11 port 2000
   exit
  voice service voip
-  allow-connections h323 to sip
+  allow-connections h3 to sip
           
-  allow-connections sip to h323
+  allow-connections sip to h3
   allow-connections sip to sip
   supplementary-service h450.12
  sip
